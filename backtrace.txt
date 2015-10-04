@@ -1,0 +1,316 @@
+Unhandled exception: page fault on read access to 0x000000c0 in 64-bit code (0x00007fec3cb1ce16).
+Register dump:
+ rip:00007fec3cb1ce16 rsp:000000000023f820 rbp:0000000000000000 eflags:00010206 (  R- --  I   - -P- )
+ rax:0000000000000000 rbx:000000000023fb50 rcx:00000000000000c0 rdx:000000000023fb50
+ rsi:0000000000000000 rdi:00000000000407b4  r8:0000000000000000  r9:0000000000000000 r10:0000000000004b64
+ r11:0000000000000002 r12:00000000000000c0 r13:0000000000000000 r14:00007fec3cdaa280 r15:00007ffd4e9d4030
+Stack dump:
+0x000000000023f820:  0000000000000000 00007fec3cdaa280
+0x000000000023f830:  00007ffd4e9d4030 3669e50548ad73b2
+0x000000000023f840:  c9b19c23652f73b2 0000000000000000
+0x000000000023f850:  0000000000000000 ffffffff00000000
+0x000000000023f860:  0000000000000000 0000000000000000
+0x000000000023f870:  0000000000000000 0000000000040840
+0x000000000023f880:  0000000000040000 521356b205e59400
+0x000000000023f890:  0000000000000002 0000000000000060
+0x000000000023f8a0:  0000000000000070 0000000000000002
+0x000000000023f8b0:  00000000000407b0 00007fec3cb09c9c
+0x000000000023f8c0:  00007ffd4e9d4030 00007fec3cb2e0b0
+0x000000000023f8d0:  456e695700657479 36776f5700636578
+Backtrace:
+=>0 0x00007fec3cb1ce16 RtlDosPathNameToNtPathName_U+0xc6() in ntdll (0x0000000000000000)
+  1 0x000000007b872d2e wine_get_unix_file_name+0x7d() in kernel32 (0x00000000000402a0)
+  2 0x00007fec3b9d59aa wmain+0x3c9() in winebrowser (0x00000000000402a0)
+  3 0x00007fec3b9d6136 in winebrowser (+0x6135) (0x00007ffd4e9d3980)
+  4 0x00007fec3cb40d8e call_thread_func+0xdd() in ntdll (0x00007ffd4e9d3980)
+  5 0x00007fec3cb3a26a RtlRaiseException+0x7d() in ntdll (0x00007ffd4e9d3980)
+  6 0x00007fec3cb0c046 in ntdll (+0x3c045) (0x00007ffd4e9d3980)
+  7 0x00007fec3d5a3283 wine_call_on_stack+0x12() in libwine.so.1 (0x00007ffd4e9d3980)
+  8 0x00007fec3d5a33e9 wine_switch_to_stack+0x8() in libwine.so.1 (0x00007fffff7ef000)
+  9 0x00007fec3cb11e5e LdrInitializeThunk+0x41d() in ntdll (0x00007fffff7ef000)
+  10 0x000000007b87b3e6 __wine_kernel_init+0x935() in kernel32 (0x0000000000120000)
+  11 0x00007fec3cb125b8 __wine_process_init+0x177() in ntdll (0x00007ffd4e9d4d60)
+  12 0x00007fec3d5a180e wine_init+0x2ad() in libwine.so.1 (0x00007ffd4e9d4e60)
+  13 0x000000007bf00ce2 main+0x81() in <wine-loader> (0x00007ffd4e9d5368)
+  14 0x00007fec3cfd3b45 __libc_start_main+0xf4() in libc.so.6 (0x0000000000000000)
+  15 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  16 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  17 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  18 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  19 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  20 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  21 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  22 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  23 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  24 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  25 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  26 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  27 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  28 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  29 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  30 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  31 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  32 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  33 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  34 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  35 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  36 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  37 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  38 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  39 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  40 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  41 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  42 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  43 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  44 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  45 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  46 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  47 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  48 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  49 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  50 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  51 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  52 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  53 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  54 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  55 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  56 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  57 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  58 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  59 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  60 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  61 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  62 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  63 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  64 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  65 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  66 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  67 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  68 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  69 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  70 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  71 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  72 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  73 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  74 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  75 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  76 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  77 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  78 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  79 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  80 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  81 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  82 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  83 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  84 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  85 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  86 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  87 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  88 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  89 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  90 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  91 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  92 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  93 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  94 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  95 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  96 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  97 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  98 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  99 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  100 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  101 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  102 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  103 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  104 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  105 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  106 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  107 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  108 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  109 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  110 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  111 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  112 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  113 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  114 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  115 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  116 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  117 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  118 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  119 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  120 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  121 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  122 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  123 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  124 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  125 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  126 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  127 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  128 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  129 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  130 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  131 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  132 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  133 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  134 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  135 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  136 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  137 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  138 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  139 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  140 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  141 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  142 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  143 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  144 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  145 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  146 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  147 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  148 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  149 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  150 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  151 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  152 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  153 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  154 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  155 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  156 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  157 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  158 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  159 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  160 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  161 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  162 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  163 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  164 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  165 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  166 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  167 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  168 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  169 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  170 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  171 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  172 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  173 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  174 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  175 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  176 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  177 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  178 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  179 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  180 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  181 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  182 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  183 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  184 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  185 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  186 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  187 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  188 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  189 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  190 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  191 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  192 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  193 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  194 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  195 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  196 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  197 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  198 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  199 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+  200 0x000000007bf00dde _start+0x28() in <wine-loader> (0x0000000000000000)
+0x00007fec3cb1ce16 RtlDosPathNameToNtPathName_U+0xc6 in ntdll: movzwl	(%r12),%eax
+Modules:
+Module	Address					Debug info	Name (69 modules)
+ELF	        7b800000-        7bc7e000	Dwarf           kernel32<elf>
+  \-PE	        7b820000-        7bc7e000	\               kernel32
+ELF	        7be00000-        7c103000	Dwarf           <wine-loader>
+ELF	    7fec36302000-    7fec3652a000	Deferred        imm32<elf>
+  \-PE	    7fec36310000-    7fec3652a000	\               imm32
+ELF	    7fec36675000-    7fec368af000	Deferred        uxtheme<elf>
+  \-PE	    7fec36680000-    7fec368af000	\               uxtheme
+ELF	    7fec368af000-    7fec36ab5000	Deferred        libxfixes.so.3
+ELF	    7fec36ab5000-    7fec36cc0000	Deferred        libxcursor.so.1
+ELF	    7fec36cc0000-    7fec36ed0000	Deferred        libxi.so.6
+ELF	    7fec36ed0000-    7fec370d3000	Deferred        libxcomposite.so.1
+ELF	    7fec370d3000-    7fec372dd000	Deferred        libxrandr.so.2
+ELF	    7fec372dd000-    7fec374e7000	Deferred        libxrender.so.1
+ELF	    7fec374e7000-    7fec376ed000	Deferred        libxxf86vm.so.1
+ELF	    7fec376ed000-    7fec378f0000	Deferred        libxinerama.so.1
+ELF	    7fec378f0000-    7fec37af5000	Deferred        libxdmcp.so.6
+ELF	    7fec37af5000-    7fec37cf9000	Deferred        libxau.so.6
+ELF	    7fec37cf9000-    7fec37f1b000	Deferred        libxcb.so.1
+ELF	    7fec37f1b000-    7fec3825e000	Deferred        libx11.so.6
+ELF	    7fec3825e000-    7fec38470000	Deferred        libxext.so.6
+ELF	    7fec38490000-    7fec38731000	Deferred        winex11<elf>
+  \-PE	    7fec384a0000-    7fec38731000	\               winex11
+ELF	    7fec3879b000-    7fec389c4000	Deferred        libexpat.so.1
+ELF	    7fec389c4000-    7fec38c01000	Deferred        libfontconfig.so.1
+ELF	    7fec38c01000-    7fec38e28000	Deferred        libpng12.so.0
+ELF	    7fec38e28000-    7fec390d3000	Deferred        libfreetype.so.6
+ELF	    7fec390d3000-    7fec392fe000	Deferred        mpr<elf>
+  \-PE	    7fec390e0000-    7fec392fe000	\               mpr
+ELF	    7fec392fe000-    7fec39519000	Deferred        libz.so.1
+ELF	    7fec39519000-    7fec397a0000	Deferred        wininet<elf>
+  \-PE	    7fec39530000-    7fec397a0000	\               wininet
+ELF	    7fec397a0000-    7fec39aae000	Deferred        comctl32<elf>
+  \-PE	    7fec397b0000-    7fec39aae000	\               comctl32
+ELF	    7fec39aae000-    7fec39d41000	Deferred        shlwapi<elf>
+  \-PE	    7fec39ac0000-    7fec39d41000	\               shlwapi
+ELF	    7fec39d41000-    7fec3a1a7000	Deferred        shell32<elf>
+  \-PE	    7fec39d60000-    7fec3a1a7000	\               shell32
+ELF	    7fec3a1a7000-    7fec3a52a000	Deferred        oleaut32<elf>
+  \-PE	    7fec3a1d0000-    7fec3a52a000	\               oleaut32
+ELF	    7fec3a52a000-    7fec3a7be000	Deferred        rpcrt4<elf>
+  \-PE	    7fec3a540000-    7fec3a7be000	\               rpcrt4
+ELF	    7fec3a7be000-    7fec3a9d8000	Deferred        version<elf>
+  \-PE	    7fec3a7c0000-    7fec3a9d8000	\               version
+ELF	    7fec3a9d8000-    7fec3ad3f000	Deferred        gdi32<elf>
+  \-PE	    7fec3a9f0000-    7fec3ad3f000	\               gdi32
+ELF	    7fec3ad3f000-    7fec3b0f1000	Deferred        user32<elf>
+  \-PE	    7fec3ad60000-    7fec3b0f1000	\               user32
+ELF	    7fec3b0f1000-    7fec3b37a000	Deferred        advapi32<elf>
+  \-PE	    7fec3b100000-    7fec3b37a000	\               advapi32
+ELF	    7fec3b37a000-    7fec3b703000	Deferred        ole32<elf>
+  \-PE	    7fec3b3a0000-    7fec3b703000	\               ole32
+ELF	    7fec3b703000-    7fec3b9c3000	Deferred        urlmon<elf>
+  \-PE	    7fec3b710000-    7fec3b9c3000	\               urlmon
+ELF	    7fec3b9c3000-    7fec3bbd9000	Dwarf           winebrowser<elf>
+  \-PE	    7fec3b9d0000-    7fec3bbd9000	\               winebrowser
+ELF	    7fec3bbd9000-    7fec3bde5000	Deferred        libnss_files.so.2
+ELF	    7fec3bde5000-    7fec3bff0000	Deferred        libnss_nis.so.2
+ELF	    7fec3bff0000-    7fec3c208000	Deferred        libnsl.so.1
+ELF	    7fec3c208000-    7fec3c410000	Deferred        libnss_compat.so.2
+ELF	    7fec3c59f000-    7fec3c7b5000	Deferred        libgcc_s.so.1
+ELF	    7fec3c7b5000-    7fec3cab6000	Deferred        libm.so.6
+ELF	    7fec3cab6000-    7fec3cdab000	Dwarf           ntdll<elf>
+  \-PE	    7fec3cad0000-    7fec3cdab000	\               ntdll
+ELF	    7fec3cdae000-    7fec3cfb2000	Deferred        libdl.so.2
+ELF	    7fec3cfb2000-    7fec3d35b000	Dwarf           libc.so.6
+ELF	    7fec3d35b000-    7fec3d578000	Deferred        libpthread.so.0
+ELF	    7fec3d599000-    7fec3d93d000	Dwarf           libwine.so.1
+ELF	    7fec3d93f000-    7fec3db62000	Deferred        ld-linux-x86-64.so.2
+ELF	    7ffd4e9f1000-    7ffd4e9f3000	Deferred        [vdso].so
+Threads:
+process  tid      prio (all id:s are in hex)
+0000000e services.exe
+	00000018    0
+	00000016    0
+	00000015    0
+	00000014    0
+	00000010    0
+	0000000f    0
+00000012 plugplay.exe
+	00000019    0
+	00000017    0
+	00000013    0
+0000001a explorer.exe
+	0000001e    0
+	0000001b    0
+0000001f (D) C:\windows\system32\winebrowser.exe
+	00000020    0 <==
+System information:
+    Wine build: wine-1.6.2
+    Platform: x86_64
+    Host system: Linux
+    Host version: 4.0.0-kali1-amd64
